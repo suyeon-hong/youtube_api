@@ -47,6 +47,7 @@ $("body").on("click", "#vidGallery article a", function(e){
 
     let vidId = $(this).attr("href");
 
+    $(".pop").remove();
     $("body").append(
         $("<div class='pop'>").append(
             $("<iframe>").attr({
@@ -58,6 +59,9 @@ $("body").on("click", "#vidGallery article a", function(e){
             $("<span>").text("CLOSE")
         )
     )
+});
+$("body").on("click", ".pop", function(){
+    $(".pop").remove();
 });
 
 /*
